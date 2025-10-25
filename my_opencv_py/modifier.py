@@ -14,12 +14,7 @@ class ImageProcessorNode(Node):
         self.bridge = CvBridge()
 
         # Subscriber to the original camera topic
-        self.sub = self.create_subscription(
-            Image,
-            'camera/image',
-            self.image_callback,
-            10
-        )
+        self.sub = self.create_subscription(Image, 'camera/image', self.image_callback, 10 )
 
         # Publisher for the modified image
         self.pub = self.create_publisher(Image, 'camera/image_with_circle', 10)

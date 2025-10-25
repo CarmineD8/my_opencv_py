@@ -21,6 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             'image_modifier = my_opencv_py.modifier:main',  
+            'compressed_image_modifier = my_opencv_py.modifier_compr:main',
+            'ball_tracker = my_opencv_py.example_ball:main',
         ],
     },
 )
